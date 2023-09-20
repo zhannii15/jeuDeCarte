@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Jeu de cartes{% endblock %}
+
+{% block body %}
+
+<div class="text-center">
+    <h2>Jeu de cartes</h2>
+    
+    <form method="post" action="{{path('app_choice')}}">
+        <label for="num_cards">Nombre de cartes à piocher :</label>
+        <input type="number" id="num_cards" name="num_cards" min="2" value="1" max="52" required>
+        <br><br>
+        <button type="submit">Piocher</button>
+    </form>
+</div>
+{% endblock %}
+
+
+
